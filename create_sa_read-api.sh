@@ -86,8 +86,8 @@ contexts:
     cluster: default-cluster
     namespace: default
     user: liveoptics-read-api
-  name: default-context
-current-context: default-context
+  name: token-context
+current-context: token-context
 users:
 - name: liveoptics-read-api
   user:
