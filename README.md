@@ -25,3 +25,7 @@ If you don't have `bash` or `kubectl` you can create the Service Account with th
 We can load it with `kubectl apply -f liveoptics-read-api-permissions.yaml` or from the UI.
 
 Once the account is created you can obtain the token with `kubectl get secret liveoptics-read-api-token -o jsonpath='{.data.token}' | base64 --decode` or from the UI as well.
+
+
+## Test the token works
+To validate the token allows to query the API objects you can try it with : `curl -k  https://<Cluster API>:6443/api/v1/nodes --header  "Authorization: Bearer <Token Value>"`
